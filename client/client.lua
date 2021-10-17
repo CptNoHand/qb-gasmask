@@ -3,12 +3,6 @@ gasMaskOn = false
 wearingMask = false
 playerped = PlayerPedId()
 
-RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
-	PlayerData = QBCore.Functions.GetPlayerData()
-end)
-
--- FUNCTIONS
-
 PlayEmote = function()
     RequestAnimDict('mp_masks@standard_car@ds@')
     TaskPlayAnim(playerped, 'mp_masks@standard_car@ds@', 'put_on_mask', 8.0, 8.0, 800, 16, 0, false, false, false)
