@@ -34,20 +34,20 @@ end)
 -- WEARING MASK 
 
 CreateThread(function()
-	while true do
-		Wait(1)
-		if Config.mask == GetPedDrawableVariation(PlayerPedId(), 1) then
-			wearingMask = true
-		else
-			wearingMask = false
-		end
+    while true do 
+        Wait(1)
+        if Config.mask == GetPedDrawableVariation(PlayerPedId(), 1) then 
+            wearingMask = true 
+        else
+            wearingMask = false 
+        end
 
-		if wearingMask then	
-            gasMaskOn = true
+        if wearingMask then 
+            gasMaskOn = true 
             SetEntityProofs(playerped, false, false, false, false, false, false, true, true, false)
-        elseif not wearingMask then
-        	gasMaskOn = false
-        	SetEntityProofs(playerped, false, false, false, false, false, false, false, false, false)
+        elseif not wearingMask then 
+            gasMaskOn = false 
+            SetEntityProofs(playerped, false, false, false, false, false, false, false, false, false) 
         end
     end
 end)
